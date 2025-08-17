@@ -1,62 +1,63 @@
-# 📌 ETL
+# 🌐 Proceso ETL — Extracción, Transformación y Carga
 
-## 📂 Código Fuente
-Este proyecto incluye el código fuente necesario para su funcionamiento, el cual puede encontrarse en la carpeta correspondiente (`.py`, `.js`, `.java`, `.ts`) o bien en un repositorio externo.  
-En caso de estar en un repositorio independiente, se puede acceder mediante el siguiente enlace:  
-🔗 [Repositorio API](URL-DEL-REPOSITORIO)
+Este módulo documenta el flujo **ETL** desarrollado para preparar los datos del proyecto **Alerta Ciudadana**.  
+El objetivo es transformar los datos en bruto en un **dataset limpio y estructurado**, listo para análisis avanzados y carga en el Data Warehouse.
 
 ---
 
-## ⚙️ Operaciones CRUD Básicas
-El sistema implementa las operaciones básicas **GET**, **POST**, **PUT**, **PATCH** y **DELETE** para la gestión de las entidades del software.  
-Estas operaciones permiten:
-- **GET** → Consultar datos de las entidades.
-- **POST** → Crear nuevos registros.
-- **PUT/PATCH** → Actualizar registros existentes.
-- **DELETE** → Eliminar registros de la base de datos.
+## 🔎 Fases del Proceso
+
+### 1️⃣ Importación de Librerías
+Se cargan las librerías necesarias para la manipulación y visualización de datos:  
+`pandas`, `numpy`, `matplotlib`, `seaborn`, entre otras.
 
 ---
 
-## 📑 Listado de Endpoints de las Entidades
-| Método | Endpoint | Descripción |
-|--------|----------|-------------|
-| GET    | `/entidad` | Obtiene la lista de entidades registradas. |
-| POST   | `/entidad` | Crea una nueva entidad. |
-| PUT    | `/entidad/{id}` | Actualiza los datos de una entidad específica. |
-| DELETE | `/entidad/{id}` | Elimina una entidad específica. |
+### 2️⃣ Carga de Datos
+- Lectura desde la fuente definida (**MySQL**).  
+- Validación de la estructura y los tipos de datos.  
+- Verificación de la integridad inicial de las tablas.
 
 ---
 
-## 🖼️ Screenshots (Capturas de Pantalla)
-A continuación se muestran ejemplos de las interfaces generadas por las operaciones CRUD:  
-*(Aquí puedes incluir imágenes con capturas de las pantallas del sistema)*
+### 3️⃣ Creación del DataFrame
+- Construcción del **DataFrame principal** consolidando información de varias tablas.  
+- Normalización de nombres de columnas.  
+- Definición de índices para optimizar consultas.
 
 ---
 
-## 🤖 Endpoints que utilizan ML (Machine Learning)
-El sistema cuenta con endpoints que aplican algoritmos de Machine Learning para el análisis de datos y la toma de decisiones.  
-Operaciones disponibles:
-- **GET** → Consultar resultados de modelos entrenados.
-- **POST** → Enviar datos para obtener predicciones.
-- **PUT/PATCH** → Actualizar configuraciones del modelo.
-- **DELETE** → Eliminar modelos entrenados.
+### 4️⃣ Análisis Exploratorio de Datos (EDA)
+- Estadísticos descriptivos: media, mediana, desviación estándar.  
+- Distribución de variables principales.  
+- Identificación de valores atípicos y datos faltantes.
 
 ---
 
-## 📑 Listado de Endpoints que consumen ML
-| Método | Endpoint | Descripción |
-|--------|----------|-------------|
-| GET    | `/ml/predict` | Devuelve predicciones basadas en el modelo entrenado. |
-| POST   | `/ml/train` | Entrena un nuevo modelo con los datos proporcionados. |
+### 5️⃣ Limpieza de Datos
+- Eliminación o imputación de valores nulos.  
+- Estandarización de **formatos de fechas, textos y categorías**.  
+- Corrección de inconsistencias y duplicados.  
 
 ---
 
-## 🖼️ Screenshots (Capturas de Pantalla de ML)
-Se incluyen imágenes que muestran ejemplos de:
-- Análisis supervisado.
-- Análisis no supervisado.
-*(Aquí agregar capturas relacionadas con ML)*
+### 6️⃣ Visualización de Datos
+Se generan entre **5 gráficas clave** para comprender el comportamiento de los datos:  
+- Histogramas y distribuciones.  
+- Diagramas de dispersión.  
+- Gráficas de tendencia temporal.  
+- Mapas o dispersión geográfica de incidentes.
 
 ---
-✍ **Autor:** *[Tu nombre o equipo de desarrollo]*  
-📅 **Última actualización:** *Agosto 2025*  
+
+### 7️⃣ Conclusiones de la Fase
+- Resumen de hallazgos relevantes en los datos.  
+- Decisiones tomadas respecto a qué información se mantiene, transforma o descarta.  
+- El dataset final queda **listo para análisis supervisado / no supervisado** o su carga en el **Data Warehouse**.
+
+---
+
+## 📂 Evidencias
+- **Notebook** en formato `.ipynb` dentro de esta carpeta.  
+
+---
