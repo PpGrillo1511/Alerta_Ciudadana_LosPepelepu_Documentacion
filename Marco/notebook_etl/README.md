@@ -1,63 +1,59 @@
-# 🌐 Proceso ETL — Extracción, Transformación y Carga
+# 🚀 Proceso ETL (Extracción, Transformación y Carga)
 
-Este módulo documenta el flujo **ETL** desarrollado para preparar los datos del proyecto **Alerta Ciudadana**.  
-El objetivo es transformar los datos en bruto en un **dataset limpio y estructurado**, listo para análisis avanzados y carga en el Data Warehouse.
-
----
-
-## 🔎 Fases del Proceso
-
-### 1️⃣ Importación de Librerías
-Se cargan las librerías necesarias para la manipulación y visualización de datos:  
-`pandas`, `numpy`, `matplotlib`, `seaborn`, entre otras.
+Este documento describe el flujo seguido en la fase ETL del proyecto **Alerta Ciudadana**, donde se preparan los datos para análisis posteriores de Machine Learning y visualización.
 
 ---
 
-### 2️⃣ Carga de Datos
-- Lectura desde la fuente definida (**MySQL**).  
-- Validación de la estructura y los tipos de datos.  
-- Verificación de la integridad inicial de las tablas.
+## 📦 1. Importación de Librerías
+Se cargaron las librerías necesarias para la manipulación, análisis y visualización de los datos:
+- **pandas**, **numpy** → manejo y transformación de datos.  
+- **matplotlib**, **seaborn** → visualización de información.  
+- **sqlalchemy**, **pymysql** → conexión a base de datos MySQL.  
 
 ---
 
-### 3️⃣ Creación del DataFrame
-- Construcción del **DataFrame principal** consolidando información de varias tablas.  
-- Normalización de nombres de columnas.  
-- Definición de índices para optimizar consultas.
+## 📥 2. Carga de Datos
+Los datos fueron obtenidos desde la base de datos **bd_alertaciudadana** (tablas de incidentes, usuarios, categorías y comentarios).  
+También se habilitó la lectura desde archivos de respaldo `.sql` en caso de no contar con conexión directa.
 
 ---
 
-### 4️⃣ Análisis Exploratorio de Datos (EDA)
-- Estadísticos descriptivos: media, mediana, desviación estándar.  
-- Distribución de variables principales.  
-- Identificación de valores atípicos y datos faltantes.
+## 🗂️ 3. Creación del DataFrame
+Se construyeron **DataFrames en pandas** a partir de los registros extraídos, asegurando un formato tabular limpio para el análisis.  
+Esto permitió unificar información de múltiples tablas en una sola estructura procesable.
 
 ---
 
-### 5️⃣ Limpieza de Datos
-- Eliminación o imputación de valores nulos.  
-- Estandarización de **formatos de fechas, textos y categorías**.  
-- Corrección de inconsistencias y duplicados.  
+## 🔎 4. Análisis Exploratorio de los Datos (EDA)
+Se aplicaron métricas descriptivas y visualizaciones iniciales para conocer el comportamiento de los datos:  
+- Conteo de incidentes por categoría.  
+- Distribución de incidentes por estado (pendiente, en revisión, atendido, descartado).  
+- Tendencias temporales en los reportes.  
 
 ---
 
-### 6️⃣ Visualización de Datos
-Se generan entre **5 gráficas clave** para comprender el comportamiento de los datos:  
-- Histogramas y distribuciones.  
-- Diagramas de dispersión.  
-- Gráficas de tendencia temporal.  
-- Mapas o dispersión geográfica de incidentes.
+## 🧹 5. Limpieza de Datos
+Las acciones principales fueron:  
+- Eliminación de duplicados.  
+- Tratamiento de valores nulos en coordenadas, descripciones y categorías.  
+- Normalización de formatos de fecha.  
+- Codificación de variables categóricas.  
 
 ---
 
-### 7️⃣ Conclusiones de la Fase
-- Resumen de hallazgos relevantes en los datos.  
-- Decisiones tomadas respecto a qué información se mantiene, transforma o descarta.  
-- El dataset final queda **listo para análisis supervisado / no supervisado** o su carga en el **Data Warehouse**.
+## 📊 6. Visualización de Datos
+Se generaron entre **2 y 5 gráficas** representativas, entre ellas:  
+- Distribución de incidentes por categoría.  
+- Evolución de incidentes a lo largo del tiempo.  
+- Mapas de calor con ubicación geográfica (latitud y longitud).  
+
+Estas visualizaciones ayudaron a detectar patrones y zonas críticas.
 
 ---
 
-## 📂 Evidencias
-- **Notebook** en formato `.ipynb` dentro de esta carpeta.  
+## ✅ 7. Conclusión de esta Fase
+El proceso ETL permitió obtener un **dataset limpio, transformado y listo para análisis avanzados**.  
+Con ello se sientan las bases para aplicar algoritmos de Machine Learning (supervisado y no supervisado), así como para construir dashboards de visualización y reportes automáticos.  
 
 ---
+📌 *Este README corresponde al notebook `ETL_alertaCiudadana.ipynb`.*  
