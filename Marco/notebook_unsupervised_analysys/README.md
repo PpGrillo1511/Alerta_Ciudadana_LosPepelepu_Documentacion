@@ -1,102 +1,67 @@
-# 📊 Análisis No Supervisado -- Base de Datos Alerta Ciudadana
+# 🤖 Análisis No Supervisado (Machine Learning)
 
-**Estado MySQL Análisis**
+## 📌 Propuesta de Aplicación
+Se propone aplicar **aprendizaje no supervisado** sobre los reportes de la base de datos `bd_alertaciudadana`, que contiene incidentes urbanos, categorías y usuarios asociados.  
+El objetivo es **agrupar patrones de incidentes** y detectar comportamientos similares que permitan mejorar la toma de decisiones en gestión urbana y atención ciudadana.
 
-------------------------------------------------------------------------
+---
 
-## 📝 Descripción
+## ⚙️ Elección del Mecanismo a Utilizar
+El algoritmo seleccionado es **K-Means Clustering**, debido a que:  
+- Permite **agrupar observaciones por similitud**.  
+- Es un método eficiente y ampliamente utilizado.  
+- Sus resultados son fáciles de interpretar y visualizar.  
 
-La base de datos **Alerta Ciudadana (V2)** permite gestionar incidentes
-urbanos reportados por la ciudadanía.\
-En este enfoque de **aprendizaje no supervisado**, el objetivo es
-**descubrir patrones ocultos y segmentaciones** dentro de los datos
-**sin una variable objetivo definida**.
+---
 
-Este análisis se centra en aplicar técnicas de **clustering y reducción
-de dimensionalidad** para entender mejor el comportamiento de los
-incidentes, categorías y usuarios, con el fin de apoyar la **gestión
-urbana y la toma de decisiones**.
+## 📖 Marco Teórico
+El algoritmo **K-Means** particiona un conjunto de datos en \(k\) clústeres, minimizando la suma de distancias cuadráticas entre los puntos y sus centroides:
 
-------------------------------------------------------------------------
+\[
+J = \sum_{i=1}^{k} \sum_{x_j \in C_i} \| x_j - \mu_i \|^2
+\]
 
-## 🗂️ Tablas principales
+donde:  
+- \(C_i\) es el clúster \(i\).  
+- \(\mu_i\) es el centroide del clúster.  
 
--   **categorias**\
-    Define los tipos de incidentes (ej. seguridad pública, emergencias,
-    infraestructura urbana).
+Este mecanismo es especialmente útil en la **detección de patrones y segmentación de datos**.
 
--   **comentarios**\
-    Observaciones adicionales o retroalimentación ciudadana sobre los
-    incidentes.
+---
 
--   **incidentes**\
-    Tabla central con los reportes: descripción, ubicación, fecha,
-    estado y categoría asociada.
+## 🛠️ Aplicación del Mecanismo
+1. **Carga y limpieza de datos** desde MySQL (`bd_alertaciudadana`).  
+2. **Generación de variables temporales**: año, mes, día de la semana, hora.  
+3. **Preprocesamiento**:  
+   - Escalado de variables numéricas.  
+   - Codificación One-Hot de variables categóricas.  
+4. **Entrenamiento de K-Means** probando diferentes valores de \(k\).  
+5. Selección del número óptimo de clústeres con:  
+   - Método del **Codo**.  
+   - **Silhouette Score**.
 
--   **usuarios**\
-    Información básica de los ciudadanos que realizan los reportes.
+---
 
-------------------------------------------------------------------------
+## 📊 Gráficos Generados
+Se generaron al menos **3 visualizaciones principales**:
 
-## 🎯 Enfoque de Análisis No Supervisado
+1. **Método del Codo (Inercia vs k)** → Identificación del punto de inflexión.  
+2. **Silhouette Score vs k** → Evaluación de la calidad de los clústeres.  
+3. **Mapa de Clústeres por Ubicación** (latitud vs longitud).  
+4. **Reducción PCA (2D)** → Visualización simplificada de clústeres.  
+5. **Categorías por Clúster** (gráfico de barras apiladas).  
 
-A diferencia del análisis supervisado, **no existe una variable objetivo
-(y)** predefinida.\
-En su lugar, buscamos **grupos o clústeres** de incidentes que compartan
-similitudes en sus características.
+---
 
-**Posibles features (X):**\
-- Texto de descripción del incidente.\
-- Palabras clave de comentarios asociados.\
-- Ubicación geográfica (coordenadas o zonas).\
-- Fecha y hora del reporte.\
-- Categoría del incidente.
+## 📈 Resultados Obtenidos
+- Se determinó un valor óptimo de **k** mediante Silhouette Score.  
+- Los clústeres muestran **agrupamientos consistentes de incidentes** según ubicación, categoría y temporalidad.  
+- El modelo permite diferenciar patrones de reporte útiles para **optimizar la gestión urbana** y priorizar recursos.
 
-------------------------------------------------------------------------
+---
 
-## 🔎 Posibles Modelos de Machine Learning
+## ✅ Conclusión de la Fase del Proyecto
+El análisis no supervisado con **K-Means** permitió descubrir **patrones ocultos en los incidentes urbanos** de la base de datos.  
+Los resultados obtenidos son relevantes para la **toma de decisiones estratégicas** en seguridad, servicios y mantenimiento urbano.  
 
--   **Clustering (agrupamiento):**
-    -   **K-Means** → segmentación de incidentes por similitudes
-        textuales o geográficas.\
-    -   **DBSCAN / HDBSCAN** → detección de incidentes atípicos
-        (outliers o anomalías).\
-    -   **Clustering jerárquico** → clasificación jerárquica de
-        incidentes por similitud.
--   **Reducción de dimensionalidad:**
-    -   **PCA (Análisis de Componentes Principales)** → simplificar
-        variables numéricas.\
-    -   **UMAP / t-SNE** → visualización de incidentes en 2D o 3D para
-        detectar grupos naturales.
--   **Procesamiento de Lenguaje Natural (NLP):**
-    -   Extracción de temas o keywords en descripciones de incidentes.\
-    -   Embeddings de texto para mejorar el clustering semántico.
-
-------------------------------------------------------------------------
-
-## 🚀 Próximos Pasos
-
-1.  **Extracción y limpieza de datos** desde MySQL (`incidentes`,
-    `categorias`, `comentarios`).\
-2.  **Normalización y vectorización de texto** (TF-IDF, embeddings).\
-3.  **Construcción del dataset de features (X)**.\
-4.  **Aplicar algoritmos de clustering** (K-Means, DBSCAN, HDBSCAN).\
-5.  **Visualizar resultados** con PCA / UMAP para interpretar los
-    grupos.\
-6.  **Perfilado de clústeres:** identificar patrones en categorías,
-    ubicaciones y horarios.
-
-------------------------------------------------------------------------
-
-## 📌 Notas
-
--   **Motor de base de datos:** MySQL 8.0\
--   **Proyecto:** Alerta Ciudadana\
--   **Enfoque:** Aprendizaje **No Supervisado** aplicado a incidentes
-    urbanos\
--   **Objetivo:** Identificación de patrones y agrupamientos de
-    incidentes para mejorar la gestión ciudadana.
-
-------------------------------------------------------------------------
-
-👤 Autoría: **Griselda Cabrera Franco**
+Esta fase demuestra que el uso de Machine Learning puede **apoyar la participación ciudadana y la eficiencia institucional** en proyectos como *Alerta Ciudadana*.  
