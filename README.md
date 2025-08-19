@@ -9,10 +9,11 @@ A diferencia de soluciones improvisadas o no centralizadas, Alerta Ciudadana des
 
 <BR>
 
-## Identificación Gráfica
-|Logo del Producto  | Logo de la empresa|
-|---|---|
-|<img src="/img/Logo-Proyecto.jpeg" alt="Logo Producto" width="150"/>|<img src="/img/Logo-Empresa.png" alt="Logo Universidad" width="200"/>|
+## 🖌 Identidad Gráfica
+
+| Logo del Producto | Logo de la Marca |
+|-------------------|------------------|
+| ![Logo Producto](/img/Logo-Proyecto.jpeg)  | ![Logo Marca](/img/Logo-Empresa.png) |
 
 <BR>
 
