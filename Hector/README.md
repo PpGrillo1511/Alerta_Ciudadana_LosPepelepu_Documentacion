@@ -40,5 +40,6 @@ El propósito de este proyecto es diseñar e implementar  una **plataforma web**
 - **Vue/ tailwind**: Frontend.
 
 
+## Licencia
 
-
+Este proyecto está licenciado bajo la Licencia Académica de Uso Exclusivo. Para más detalles, consulta el archivo [ALERTA_CIUDADANA_LICENCIA.txt](./ALERTA_CIUDADANA_LICENCIA.txt).

@@ -105,3 +105,7 @@ Este organigrama representa la estructura organizativa del equipo, mostrando rol
 | 📱 Kotlin (App) | Cliente móvil nativo para crear y consultar reportes |
 
 <BR>
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia Académica de Uso Exclusivo. Para más detalles, consulta el archivo [ALERTA_CIUDADANA_LICENCIA.txt](./ALERTA_CIUDADANA_LICENCIA.txt).
