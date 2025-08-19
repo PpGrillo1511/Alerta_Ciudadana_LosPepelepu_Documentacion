@@ -15,7 +15,7 @@ Su objetivo es agilizar la respuesta ante emergencias y contribuir a la prevenci
 
 | Logo del Producto | Logo de la Marca |
 |-------------------|------------------|
-| ![Logo Producto](RUTA_LOGO_PRODUCTO)  | ![Logo Marca](https://github.com/PpGrillo1511/Alerta_Ciudadana_LosPepelepu_Documentacion/issues/2) |
+| ![Logo Producto](/img/Logo-Proyecto.jpeg)  | ![Logo Marca](/img/Logo-Empresa.png) |
 
 ---
 
