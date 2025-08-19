@@ -4,68 +4,78 @@
 
 ## 📝 Descripción
 
-La base de datos **Alerta Ciudadana** ha sido diseñada para gestionar incidentes reportados por la ciudadanía, con el objetivo de mejorar la seguridad y atención de emergencias en entornos urbanos.  
-Este esquema permite registrar incidentes, usuarios, categorías y comentarios relacionados, generando un repositorio estructurado de información que puede ser aprovechado para **modelos de aprendizaje supervisado**.
+La base de datos **Alerta Ciudadana** se diseñó para gestionar incidentes reportados por la ciudadanía con el objetivo de **mejorar la seguridad y la atención a emergencias** en entornos urbanos.  
+Este proyecto aplica técnicas de **aprendizaje supervisado** para predecir y clasificar incidentes, aprovechando tanto datos estructurados (categorías, usuarios, fechas) como no estructurados (descripciones).
 
+---
 
 ## 🗂️ Tablas principales
 
-- **`categorias`**  
-  Contiene los tipos de incidentes registrados (ej. seguridad pública, emergencias, infraestructura urbana).
+- **`categorias`** → Tipos de incidentes (seguridad pública, emergencias, infraestructura, etc.).
+- **`comentarios`** → Observaciones adicionales ligadas a los reportes.
+- **`incidentes`** → Reportes principales (descripción, ubicación, fecha, estado y categoría).
+- **`usuarios`** → Información de ciudadanos que realizan reportes.
 
-- **`comentarios`**  
-  Almacena las observaciones adicionales de los incidentes reportados.
+---
 
-- **`incidentes`**  
-  Tabla central que guarda los reportes de incidentes, incluyendo descripción, ubicación, fecha, estado y categoría asociada.
+## 🎯 Objetivo del Análisis Supervisado
 
-- **`usuarios`**  
-  Información de los ciudadanos que reportan incidentes en la plataforma.
+El análisis busca **predecir información relevante de los incidentes** a partir de los datos registrados:
 
+- **Variable objetivo (`y`):**
+  - Categoría del incidente.
+  - Estado del incidente (ej. resuelto/no resuelto).
 
-## 🎯 Enfoque de Análisis Supervisado
-
-El análisis supervisado requiere **features (X)** y una **variable objetivo (y)**.  
-En este caso, algunas opciones son:
-
-- **Variable objetivo (y):**
-  - Categoría del incidente (`categorias`).
-  - Estado del incidente (ej. resuelto / no resuelto, si existe en `incidentes`).
-
-- **Features (X):**
-  - Texto de descripción del incidente.  
-  - Fecha y hora del reporte.  
-  - Ubicación geográfica.  
-  - Usuario que reporta.  
+- **Características (`X`):**
+  - Texto de la descripción.
+  - Fecha y hora del reporte.
+  - Ubicación geográfica.
+  - Usuario que reporta.
   - Comentarios asociados.
 
+---
 
-## 🔎 Posibles Modelos de Machine Learning
+## 🔎 Modelos Aplicados
 
-- **Clasificación supervisada:**  
-  - Predecir la categoría de un incidente a partir de su descripción.  
-  - Determinar si un incidente será resuelto rápidamente o no.  
+En el notebook se implementan y comparan distintos algoritmos supervisados:
 
-- **Regresión supervisada:**  
-  - Estimar el tiempo de resolución de un incidente según sus características.
+- **Regresión Logística**
+- **Random Forest**
+- **XGBoost**
 
-- **Procesamiento de Lenguaje Natural (NLP):**  
-  - Análisis de descripciones para identificar palabras clave que permitan clasificar automáticamente los incidentes.
+Cada modelo es evaluado con métricas como:
 
+- **Accuracy**
+- **Precision**
+- **Recall**
+- **F1-Score**
+- **Matriz de confusión**
 
-## 🚀 Próximos Pasos
+---
 
-1. Normalizar y limpiar los datos de `incidentes` y `comentarios`.  
-2. Generar un dataset unificado con features y variable objetivo.  
-3. Dividir el dataset en **entrenamiento (train)** y **prueba (test)**.  
-4. Entrenar modelos supervisados de clasificación o regresión.  
+## 📊 Resultados Principales
 
+- Se entrenaron modelos con un pipeline de **imputación de valores faltantes, codificación categórica y estandarización**.
+- Se obtuvo un buen desempeño en la predicción de la categoría de incidentes, destacando **Random Forest y XGBoost** como los más robustos.
+- Se generaron visualizaciones de métricas, importancia de variables y distribuciones de la base de datos.
 
-## 📌 Notas
+---
 
-- Motor de base de datos: **MySQL 8.0**  
-- Proyecto: **Alerta Ciudadana**  
-- Enfoque: **Aprendizaje Supervisado aplicado a incidentes urbanos**
+## 🚀 Flujo de Trabajo
 
+1. **Extracción de datos** desde MySQL.
+2. **Limpieza y normalización** (manejo de nulos, codificación categórica, escalado).
+3. **División del dataset** en entrenamiento y prueba.
+4. **Entrenamiento de modelos supervisados**.
+5. **Evaluación de métricas y visualizaciones**.
+6. **Interpretación de resultados** para la toma de decisiones urbanas.
 
+---
 
+## 📌 Notas Técnicas
+
+- Motor de base de datos: **MySQL 8.0**
+- Lenguaje: **Python 3.10+**
+- Librerías principales: `scikit-learn`, `xgboost`, `pandas`, `matplotlib`
+- Proyecto: **Alerta Ciudadana**
+- Enfoque: **Aprendizaje Supervisado en seguridad urbana**
