@@ -1,3 +1,4 @@
+
 # 📢 Alerta Ciudadana – Documentación
 
 ---
@@ -5,7 +6,7 @@
 ## 🏙 Introducción
 
 **Alerta Ciudadana** es un sistema diseñado para mejorar la seguridad y comunicación entre la ciudadanía y las autoridades.  
-Permite a los usuarios reportar incidentes en tiempo real, recibir notificaciones de alertas cercanas y acceder a un mapa interactivo con información actualizada de sucesos relevantes.  
+Permite a los usuarios reportar incidentes en tiempo real, recibir notificaciones de alertas cercanas y acceder a un mapa interactivo con información actualizada de sucesos relevantes.
 
 Su objetivo es agilizar la respuesta ante emergencias y contribuir a la prevención de delitos, fomentando una red colaborativa entre la población y las instituciones de seguridad.
 
@@ -57,13 +58,13 @@ Desarrollar un sistema digital que permita a la ciudadanía reportar incidentes 
 
 ## 👥 Equipo de Desarrollo – *Los Pepelepú*
 
-| Nombre Completo | Rol en el Proyecto | GitHub |
-|-----------------|--------------------|--------|
-| José Daniel Loza Marín | Desarrollador Frontend / Desarrollador Movil / Lider de Proyecto| [PpGrillo1511](https://github.com/PpGrillo1511) |
-| Jareni Gómez Juan | Documentación y Diseño | [jareni02](https://github.com/jareni02) |
-| Griselda Cabrera Franco | Desarrollador Frontend y Diseño | [gris12eldaa](https://github.com/gris12eldaa) |
-| Luis Abdiel Rivera Gayosso | Desarrollador Backend | [LuisAbdielRivera](https://github.com/LuisAbdielRivera) |
-| Esaú Vargas Álvarez | Desarrollador Frontend | [Giggs007](https://github.com/Giggs007) |
+| Nombre Completo             | Rol en el Proyecto                           | GitHub                                                                 |
+|-----------------------------|----------------------------------------------|------------------------------------------------------------------------|
+| José Daniel Loza Marín      | Desarrollador Frontend / Desarrollador Móvil / Líder de Proyecto | [PpGrillo1511](https://github.com/PpGrillo1511)                        |
+| Jareni Gómez Juan           | Documentación y Diseño                       | [jareni02](https://github.com/jareni02)                                |
+| Griselda Cabrera Franco     | Desarrollador Frontend y Diseño              | [gris12eldaa](https://github.com/gris12eldaa)                          |
+| Luis Abdiel Rivera Gayosso  | Desarrollador Backend                        | [LuisAbdielRivera](https://github.com/LuisAbdielRivera)                |
+| Esaú Vargas Álvarez         | Desarrollador Frontend                       | [Giggs007](https://github.com/Giggs007)                                |
 
 ---
 
@@ -85,6 +86,12 @@ Metodología **Scrum**, con iteraciones quincenales, reuniones de seguimiento y 
  ┣ 📂 proposal_datawarehouse       # Propuesta de Data Warehouse
  ┣ 📂 seeder_sourcecode            # Código para inicializar datos
  ┗ 📜 README.md                    # Documentación principal
-
+```
 
 ✍️ *Última actualización:* Agosto 2025
+
+---
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia Académica de Uso Exclusivo. Para más detalles, consulta el archivo [ALERTA_CIUDADANA_LICENCIA.txt](./ALERTA_CIUDADANA_LICENCIA.txt).
