@@ -34,8 +34,7 @@ Desarrollar un prototipo de plataforma digital de alerta ciudadana que permita e
 
 ## 🏢 Organigrama del Proyecto
 
-
-
+*(Ver imagen del organigrama en esta carpeta)*
 
 ---
 
@@ -103,5 +102,30 @@ Desarrollar un prototipo de plataforma digital de alerta ciudadana que permita e
 
 ---
 
-✨ *Proyecto académico – Plataforma de Alerta Ciudadana*  
+## 🔗 Prototipo en Figma
 
+El diseño del sistema (sketches, wireframes y mockups) puede consultarse en el siguiente enlace:
+
+👉 **Figma – Plataforma de Alerta Ciudadana**  
+https://www.figma.com/design/K6bxu43tTSpO8J9jgQjzHM/Alerta-Ciudadana?node-id=12-65&t=rDN15GRkaAWFmh2w-1
+
+---
+
+## 📊 Presentación del Proyecto
+
+La presentación utilizada para exponer el prototipo de la **Plataforma de Alerta Ciudadana** se encuentra disponible en el siguiente enlace:
+
+👉 **Canva – Presentación del Proyecto Alerta Ciudadana**  
+https://www.canva.com/design/DAG6bmXzY5Q/u1m2IrL_VWZS5J3rHplZzw/view?utm_content=DAG6bmXzY5Q&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h44efd070ad
+
+La presentación incluye:
+- Descripción general del proyecto
+- Objetivos del sistema
+- Organigrama del equipo
+- Sketches, wireframes y mockups
+- Flujo de navegación del sistema
+- Conclusiones del proyecto
+
+---
+
+✨ *Proyecto académico – Plataforma de Alerta Ciudadana*  
