@@ -9,15 +9,20 @@
 
 ---
 
-## 👥 Integrantes del equipo
+---
 
-| No. | Nombre completo                 |
-|-----|---------------------------------|
-| 1   | Jareni Gomez Juan               |
-| 2   | Griselda Cabrera Franco         |
-| 3   | José Daniel Loza Marín          |
-| 4   | Esaú Vargas Alvares             |
-| 5   | Abdiel Rivera Gayoso            |
+## 👥 Equipo de Desarrollo – *Los Pepelepú*
+
+| Nombre Completo | Rol en el Proyecto | GitHub |
+|-----------------|--------------------|--------|
+| José Daniel Loza Marín | Desarrollador Frontend / Desarrollador Movil / Lider de Proyecto| [PpGrillo1511](https://github.com/PpGrillo1511) |
+| Jareni Gómez Juan | Documentación y Diseño | [jareni02](https://github.com/jareni02) |
+| Griselda Cabrera Franco | Desarrollador Frontend y Diseño | [gris12eldaa](https://github.com/gris12eldaa) |
+| Luis Abdiel Rivera Gayosso | Desarrollador Backend | [LuisAbdielRivera](https://github.com/LuisAbdielRivera) |
+| Esaú Vargas Álvarez | Desarrollador Frontend | [Giggs007](https://github.com/Giggs007) |
+
+---
+
 
 ---
 
@@ -35,5 +40,6 @@ El propósito de este proyecto es diseñar e implementar  una **plataforma web**
 - **Vue/ tailwind**: Frontend.
 
 
+## Licencia
 
-
+Este proyecto está licenciado bajo la Licencia Académica de Uso Exclusivo. Para más detalles, consulta el archivo [ALERTA_CIUDADANA_LICENCIA.txt](./ALERTA_CIUDADANA_LICENCIA.txt).

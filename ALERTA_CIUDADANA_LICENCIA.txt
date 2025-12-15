@@ -1,0 +1,30 @@
+
+Licencia Académica del Proyecto: Alerta Ciudadana
+
+Licenciado bajo la Licencia Académica de Uso Exclusivo
+
+Este proyecto está licenciado bajo la Licencia Académica de Uso Exclusivo. Los usuarios pueden consultar y modificar este código para fines académicos y educativos, siempre y cuando respeten los términos de esta licencia.
+
+Uso permitido:
+1. Consulta y modificación: Los estudiantes y académicos pueden usar y modificar este código para fines de aprendizaje y proyectos académicos.
+2. Distribución: Los usuarios pueden distribuir el código dentro de su ámbito académico, siempre que se incluya este aviso de licencia.
+3. Investigación y mejora: Los usuarios pueden modificar y mejorar el código para su uso dentro del ámbito educativo.
+
+Restricciones:
+1. Uso comercial: No se permite el uso de este código con fines comerciales o en productos que generen ingresos directos.
+2. Distribución sin cambios: Si el código se distribuye, debe incluir este aviso de licencia y no se debe distribuir sin los cambios que se hayan realizado.
+3. Responsabilidad: Este proyecto se proporciona "tal cual", sin ninguna garantía de ningún tipo, expresa o implícita. Los responsables del proyecto no se hacen responsables de los daños causados por el uso de este código.
+
+Propiedad:
+Este proyecto es de propiedad académica y es utilizado como parte de los estudios de los alumnos de la Universidad Tecnológica de Xicotepec de Juárez, como parte del curso de Administración de Proyectos de TI, bajo la supervisión del profesor Héctor Valderrabano González.
+
+Créditos:
+Desarrolladores:
+- Griselda Cabrera Franco
+- José Daniel Loza Marín
+- Jareni Gómez Juan
+- Esaú Vargas Álvarez
+- Luis Abdiel Rivera Gayoso
+
+Institución:
+Universidad Tecnológica de Xicotepec de Juárez, Puebla, México.

@@ -34,7 +34,7 @@ Desarrollar un prototipo de plataforma digital de alerta ciudadana que permita e
 
 ## 🏢 Organigrama del Proyecto
 
-*(Ver imagen del organigrama en esta carpeta)*
+![Organigrama del Proyecto](./Organigrama.jpeg)
 
 ---
 
