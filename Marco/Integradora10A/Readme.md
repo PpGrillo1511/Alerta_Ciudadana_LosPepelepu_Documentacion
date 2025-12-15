@@ -34,8 +34,7 @@ Desarrollar un prototipo de plataforma digital de alerta ciudadana que permita e
 
 ## 🏢 Organigrama del Proyecto
 
-
-
+![Organigrama del Proyecto](./Organigrama.jpeg)
 
 ---
 
@@ -104,4 +103,3 @@ Desarrollar un prototipo de plataforma digital de alerta ciudadana que permita e
 ---
 
 ✨ *Proyecto académico – Plataforma de Alerta Ciudadana*  
-
